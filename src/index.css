@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ct-sidebar-nav-item {
+    @apply flex gap-2 items-center p-3 border-l-[3px] border-transparent text-sm transition-colors duration-500 hover:bg-white002;
+}
+
+.ct-sidebar-nav-item.active {
+    @apply font-semibold border-l-white bg-white01;
+}
+
+.ct-sidebar-nav-sub {
+    @apply py-3 font-light block;
+}
+
+.ct-sidebar-nav-sub.active {
+    @apply font-semibold;
+}
+
+.ct-sidebar-nav-item.active ~ ul{
+    @apply block;
+}
+
+.ct-account-nav-item {
+    @apply border-b-2 border-transparent cursor-pointer text-secondary hover:border-black hover:text-black transition-colors duration-500;
+}
+
+.ct-account-nav-item.active {
+    @apply border-black text-black;
+}
+
+.hidden-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.small-scroll::-webkit-scrollbar {
+    @apply w-1;
+}
+  
+.small-scroll::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+
+.small-scroll::-webkit-scrollbar-thumb {
+    @apply bg-secondary-bg rounded-lg;
+}
+
+.jodit-react-container {
+    flex: 1;
+}
+
+.jodit-react-container .jodit-container {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.jodit-react-container .jodit-container .jodit-workplace {
+    flex: 1;
+    overflow-y: scroll;
+    /* max-height: 499px!important;
+    height: 499px!important; */
+}
+
+.jodit-react-container .jodit-container .jodit-workplace div {
+    max-height: 450px!important;
+    height: 450px!important;
+}
+
+.jodit-react-container .jodit-container .jodit-status-bar-link {
+    display: none;
+}
+
+.react-daterange-picker__clear-button {
+    @apply hidden;
+}
+
+
+@media (max-width: 768px) {
+    .ct-main-content {
+        padding-left: 0!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .ct-main-content {
+        padding-left: 240px!important;
+    }
+
+    .ct-sidebar {
+        left: 0!important;
+    }
+}
