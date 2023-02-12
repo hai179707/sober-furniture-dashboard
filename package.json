@@ -1,6 +1,6 @@
 {
   "name": "devcamp-shop24h-dashboard",
-  "homepage": "/dashboard",
+  "homepage": "/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
